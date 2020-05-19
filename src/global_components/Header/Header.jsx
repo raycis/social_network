@@ -2,6 +2,10 @@ import React from "react";
 
 
 const Header = () =>{
+
+
+
+
     return(
         <div>
             Социальная сеть
