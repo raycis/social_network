@@ -1,0 +1,20 @@
+.header{
+    display: grid;
+    grid-template-areas: "left_bar right_bar";
+
+    padding-top: 10px;
+    padding-left: 10px;
+    font-size: 20px;
+}
+.left_bar{
+    grid-area: left_bar;
+}
+.right_bar{
+    grid-area: right_bar;
+
+}
+.login_info{
+    float: right;
+    padding-right: 10px;
+    color: green;
+}

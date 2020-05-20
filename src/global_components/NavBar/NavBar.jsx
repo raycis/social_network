@@ -13,7 +13,6 @@ const NavBar =()=>{
             <br/>
             <NavLink to='/message'>Сообщения</NavLink>
             <br/>
-            <NavLink to='/login'>Логин</NavLink>
         </div>
     )
 }

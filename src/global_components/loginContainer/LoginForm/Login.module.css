@@ -1,0 +1,29 @@
+.login_form{
+    border: 1px solid #000;
+    border-radius: 10px;
+    width: 1170px;
+    height: 900px;
+    margin: 15px auto;
+    display: flex;
+    justify-content: center;
+
+}
+.login_form h1{
+    margin-top: 100px;
+}
+.field{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.login_form input{
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 10px;
+}
+.login_form button{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    font-size: 20px;
+}

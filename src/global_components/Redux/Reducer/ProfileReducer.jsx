@@ -18,11 +18,11 @@ const ProfileReducer = (state = initialState, action)=>{
 
 export const profileThunkCreator = () => async (dispatch)=>{
 
-    const response = await api.getAuth();
-    if(response.data.resultCode === 0) {
-        let {email, id, login} = response.data.data;
-        debugger
-    }
+    // const response = await api.getAuth();
+    // if(response.data.resultCode === 0) {
+    //     let {email, id, loginContainer} = response.data.data;
+    //     debugger
+    // }
 
     }
 
