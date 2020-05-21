@@ -14,11 +14,27 @@ export const APIAuth = {
     getAuthInfo() {
         return instance.get(`auth/me`)
     },
-    login(email, password, rememberMe){
+    login(email, password, rememberMe = false){
         return instance.post(`auth/login`,{email, password, rememberMe})
     },
     logout(){
         return instance.delete(`auth/login`)
+    }
+
+};
+
+export const APIUsers = {
+
+    getAllUsers(curentPage, pageSize){
+        return instance.get(`users?page=${curentPage}&count=${pageSize}`)
+    },
+
+    getFollow(id){
+        return instance.post(`follow/${id}`)
+    },
+
+    getUnfollow(id){
+        return instance.delete(`follow/${id}`)
     }
 
 }

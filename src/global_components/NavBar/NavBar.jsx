@@ -9,7 +9,7 @@ const NavBar =()=>{
         <div className={styles.navbar}>
             <NavLink to='/profile'>Моя страница</NavLink>
             <br/>
-            <NavLink to='/users'>Пользователи</NavLink>
+            <NavLink to='/allusers'>Пользователи</NavLink>
             <br/>
             <NavLink to='/message'>Сообщения</NavLink>
             <br/>

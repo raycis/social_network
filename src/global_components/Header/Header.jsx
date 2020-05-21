@@ -13,8 +13,7 @@ class Header extends React.Component{
                 </div>
                 <div className={styles.right_bar}>
                     <div className={styles.login_info}>
-                    {<div>{this.props.authInfo.email}
-                         <button onClick={this.props.logoutThunkCreator}>Сменить пользователя</button></div>}
+                    {this.props.authInfo.email} <button onClick={this.props.logoutThunkCreator}>Сменить пользователя</button>
                     </div>
                 </div>
             </div>

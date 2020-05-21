@@ -5,7 +5,7 @@ import {compose} from "redux";
 import {profileThunkCreator} from "../../Redux/Reducer/ProfileReducer";
 
 
-class ContainerProfile extends React.Component{
+class ProfileContainer extends React.Component{
     componentDidMount() {
 
         this.props.profileThunkCreator()
@@ -20,4 +20,4 @@ class ContainerProfile extends React.Component{
 
 export default compose(
     connect(null, {profileThunkCreator})
-)(ContainerProfile);
+)(ProfileContainer);

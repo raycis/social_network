@@ -21,7 +21,7 @@
   grid-area: navbar;
   border: 1px solid #000;
   border-radius: 10px;
-  height: 800px;
+  height: 900px;
 }
 .content{
   grid-area: content;

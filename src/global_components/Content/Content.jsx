@@ -1,16 +1,15 @@
 import React from "react";
-import ContainerProfile from "./ContainerProfile/СontainerProfile";
-import LoginContainer from "../loginContainer/LoginContainer";
+import ProfileContainer from "./ProfileContainer/ProfileСontainer";
 import {Route, withRouter} from "react-router-dom";
 import {compose} from "redux";
+import AllUsersContainer from "./AllUsersContainer/AllUsersContainer";
 
 
 const Content=()=>{
     return(
         <div>
-            <Route path='/profile' render={()=><ContainerProfile/>} />
-            <Route path='/login' render={()=><LoginContainer/>} />
-
+            <Route path='/profile' render={()=><ProfileContainer/>} />
+            <Route path='/allusers' render={()=><AllUsersContainer/>} />
         </div>
     )
 }

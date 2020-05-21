@@ -1,4 +1,4 @@
-import {api} from "../../api/api";
+
 
 let getId = "getId"
 

@@ -10,7 +10,7 @@ class LoginContainer extends React.Component{
         const onSubmit = (formData)=>{
             this.props.loginThunkCreator(formData.email, formData.password, formData.rememberMe)
 
-        }
+        };
         return (
             <div>
                 <LoginReduxForm onSubmit={onSubmit}/>
