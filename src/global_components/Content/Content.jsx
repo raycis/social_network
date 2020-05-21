@@ -3,6 +3,7 @@ import ProfileContainer from "./ProfileContainer/ProfileСontainer";
 import {Route, withRouter} from "react-router-dom";
 import {compose} from "redux";
 import AllUsersContainer from "./AllUsersContainer/AllUsersContainer";
+import FriendsContainer from "./FriendsContainer/FriendsContainer";
 
 
 const Content=()=>{
@@ -10,6 +11,7 @@ const Content=()=>{
         <div>
             <Route path='/profile' render={()=><ProfileContainer/>} />
             <Route path='/allusers' render={()=><AllUsersContainer/>} />
+            <Route path='/friends' render={()=><FriendsContainer/>} />
         </div>
     )
 }

@@ -1,4 +1,5 @@
 import {APIUsers} from "../../api/api";
+import {getFriendsThunk} from "./FriendsReducer";
 
 let GET_ALL_USERS = 'GET_ALL_USERS';
 let GET_TOTAL_COUNT = 'GET_TOTAL_COUNT';
@@ -108,6 +109,8 @@ export const unfollowThunkCreator = (id) => async (dispatch)=>{
     if(response.data.resultCode === 0){
         dispatch(unfollowActionCreater(id))}
     dispatch(setButtonDisabled(false, id))
+
+   dispatch(getFriendsThunk())
 
 
 };

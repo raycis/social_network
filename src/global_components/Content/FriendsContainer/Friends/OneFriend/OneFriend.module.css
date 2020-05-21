@@ -1,0 +1,51 @@
+.oneuser{
+    border: 1px solid #000;
+    margin: 10px 30px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-areas: "photo name followed"
+                        "photo status followed";
+    grid-auto-columns: 20% 60% 20%;
+
+}
+.oneuser img{
+    border-radius: 50%;
+    margin: 20px;
+    width: 100px;
+    height: 100px;
+
+}
+.photo{
+    grid-area: photo;
+}
+.name{
+    grid-area: name;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 30px;
+    position: relative;
+}
+.status{
+    grid-area: status;
+    width: 150px;
+
+}
+.followed{
+    grid-area: followed;
+    margin-top: 30px;
+}
+
+.follow{
+    padding: 5px 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    background-color: greenyellow;
+    border: 2px solid greenyellow;
+}
+.unfollow{
+    padding: 5px 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    background-color: red;
+    border: 2px solid red;
+}

@@ -11,6 +11,8 @@ const NavBar =()=>{
             <br/>
             <NavLink to='/allusers'>Пользователи</NavLink>
             <br/>
+            <NavLink to='/friends'>Друзья</NavLink>
+            <br/>
             <NavLink to='/message'>Сообщения</NavLink>
             <br/>
         </div>
