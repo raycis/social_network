@@ -1,0 +1,39 @@
+.profile{
+    display: grid;
+    grid-template-areas: "photos fullName lookingForAJob"
+                        "photos status lookingForAJob"
+                         "photos  aboutMe lookingForAJob";
+    grid-auto-columns: 30% 40% 30% ;
+}
+
+.photos{
+    grid-area: photos;
+
+}
+.photos img{
+    margin-top: 30px;
+    margin-left: 30px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.fullName{
+    grid-area: fullName;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 30px;
+    padding-top: 20px;
+}
+.aboutMe{
+    grid-area: aboutMe;
+}
+.status{
+    display: flex;
+
+    grid-area: status;
+}
+.lookingForAJob{
+    grid-area: lookingForAJob;
+    margin-top: 40px;
+    font-size: 18px;
+}

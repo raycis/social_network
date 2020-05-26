@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./OneUser.module.css";
-import Avatar from "../../../../Forms/Avatar";
+import {NavLink} from "react-router-dom";
+import avatar from "../../../../Photos/avatar.png";
 
 const OneUser =(props)=>{
     let follow = ()=>{
@@ -11,10 +12,13 @@ const OneUser =(props)=>{
     let unfollow = ()=>{
         props.unfollowThunkCreator(props.id)
     };
-
     return(
         <div className={styles.oneuser}>
-            <div className={styles.photo}>{props.photos.smail === null ?props.photos.smail :<Avatar/>}</div>
+            <div className={styles.photo}>
+                <NavLink to={'/profile/' + props.id }>
+                    <img src={!props.photos.large ? avatar :props.photos.large} alt=""/>
+                </NavLink>
+            </div>
             <div className={styles.name}>{props.name}</div>
             <div className={styles.status}>Статус: {props.status}</div>
             <div className={styles.followed}>{props.followed

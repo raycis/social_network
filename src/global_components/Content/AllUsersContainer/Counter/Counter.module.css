@@ -1,28 +1,36 @@
-.counter{
-    padding: 5px;
-    margin: 10px auto;
-    width: 150px;
-    overflow: hidden;
-    cursor: pointer;
 
-}
-.number{
-    padding: 5px;
-    font-size: 18px;
-}
 .number_active{
     font-weight: 700;
     padding: 5px;
     font-size: 18px;
+
 }
 .counter_all{
-    display: flex;
-    width: 350px;
-    margin: 0 auto;
-    padding: 10px;
+    display: grid;
+    grid-template-areas: "left center right";
+    grid-auto-columns: 10% 80% 10%;
 
+
+}
+.counter_left{
+    grid-area: left;
+}
+.counter_center{
+    grid-area: center;
+    text-align: center;
+    padding-top: 10px;
+
+}
+.counter_right{
+    grid-area: right;
 }
 .counter_all button{
     margin: 10px;
     border-radius: 10px;
+    cursor: pointer;
+}
+.counter_all span{
+    cursor: pointer;
+    padding: 5px;
+    font-size: 18px;
 }

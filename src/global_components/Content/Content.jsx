@@ -9,7 +9,7 @@ import FriendsContainer from "./FriendsContainer/FriendsContainer";
 const Content=()=>{
     return(
         <div>
-            <Route path='/profile' render={()=><ProfileContainer/>} />
+            <Route path='/profile/:userId?' render={()=><ProfileContainer/>} />
             <Route path='/allusers' render={()=><AllUsersContainer/>} />
             <Route path='/friends' render={()=><FriendsContainer/>} />
         </div>

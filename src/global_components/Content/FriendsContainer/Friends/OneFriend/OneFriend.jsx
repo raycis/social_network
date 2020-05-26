@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./OneFriend.module.css";
-import Avatar from "../../../../Forms/Avatar";
+import avatar from "../../../../Photos/avatar.png";
 
 
 
@@ -12,7 +12,7 @@ const OneFriend =(props)=>{
 
     return(
         <div className={styles.oneuser}>
-            <div className={styles.photo}>{props.photos.smail === null ?props.photos.small :<Avatar/>}</div>
+            <div className={styles.photo}><img src={!props.photos.large  ? avatar :props.photos.large} alt=""/></div>
             <div className={styles.name}>{props.name}</div>
             <div className={styles.status}>Статус: {props.status}</div>
             <div className={styles.followed}>
