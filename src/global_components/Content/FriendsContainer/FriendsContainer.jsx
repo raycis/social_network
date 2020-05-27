@@ -13,9 +13,6 @@ class FriendsContainer extends React.Component{
     }
 
     render() {
-        // let unfollow=(id)=>{
-        //     this.props.unfollowThunkCreator(id)
-        // };
         return(
             <div><Friends unfollowThunkCreator={this.props.unfollowThunkCreator} friends={this.props.friends} unfollow={this.unfollow} /></div>
         )

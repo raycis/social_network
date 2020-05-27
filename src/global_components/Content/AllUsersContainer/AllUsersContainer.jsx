@@ -1,4 +1,4 @@
-import React from "react";
+import React, {PureComponent} from "react";
 import {connect} from "react-redux";
 import AllUsers from "./AllUsers/AllUsers";
 import {followThunkCreator, getAllUsersThunk, unfollowThunkCreator} from "../../Redux/Reducer/AllUsersReducer";
@@ -6,13 +6,14 @@ import Counter from "./Counter/Counter";
 
 
 
-class AllUsersContainer extends React.Component{
+class AllUsersContainer extends PureComponent{
     componentDidMount() {
         this.props.getAllUsersThunk(this.props.curentPage, this.props.pageSize)
     }
     onClickCurrent =(page)=>{
         this.props.getAllUsersThunk(page, this.props.pageSize)
     };
+
     render(){
         return(
             <div>

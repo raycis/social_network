@@ -6,14 +6,15 @@ import {connect} from "react-redux";
 
 class LoginContainer extends React.Component{
 
-    render() {
-        const onSubmit = (formData)=>{
-            this.props.loginThunkCreator(formData.email, formData.password, formData.rememberMe)
+    onSubmit = (formData)=>{
+        this.props.loginThunkCreator(formData.email, formData.password, formData.rememberMe)
+    };
 
-        };
+    render() {
+
         return (
             <div>
-                <LoginReduxForm onSubmit={onSubmit}/>
+                <LoginReduxForm onSubmit={this.onSubmit}/>
             </div>
         )
     }
