@@ -2,8 +2,14 @@ import React from "react";
 import Profile from "./Profile/Profile";
 import {connect} from "react-redux";
 import {compose} from "redux";
-import {profileThunkCreator, statusThunkCreator, updateStatusThunkCreator} from "../../Redux/Reducer/ProfileReducer";
+import {
+    addPostAC,
+    profileThunkCreator,
+    statusThunkCreator,
+    updateStatusThunkCreator
+} from "../../Redux/Reducer/ProfileReducer";
 import {withRouter} from "react-router-dom";
+import PostBar from "./Profile/PostBar/PostBar";
 
 
 class ProfileContainer extends React.Component{
@@ -18,18 +24,23 @@ class ProfileContainer extends React.Component{
     render() {
 
         return(
-                <Profile profile={this.props.profile} status={this.props.status} updateStatusThunkCreator={this.props.updateStatusThunkCreator} />
+            <>
+                <Profile profile={this.props.profile} status={this.props.status}
+                         updateStatusThunkCreator={this.props.updateStatusThunkCreator} />
+                         <PostBar photo={this.props.profile.photos.large} post={this.props.post} addPostAC={this.props.addPostAC}/>
+                         </>
         )
     }
 }
 let mapStateToProps=(state)=>{
     return{
         profile: state.profile.profile,
-        status: state.profile.status
+        status: state.profile.status,
+        post: state.profile.post
     }
 };
 
 export default compose(
-    connect(mapStateToProps, {profileThunkCreator, statusThunkCreator, updateStatusThunkCreator}),
+    connect(mapStateToProps, {profileThunkCreator, statusThunkCreator, updateStatusThunkCreator, addPostAC}),
     withRouter
 )(ProfileContainer);

@@ -23,7 +23,7 @@ export const getFriendsActionCreater=(friends) => {
 };
 
 export const getFriendsThunk = (curentPage, pageSize)=> async (dispatch)=>{
-    let response = await APIUsers.getAllUsers(1, 50);
+    let response = await APIUsers.getAllUsers(1, 90);
     let friends = response.data.items.filter(items=>items.followed ===true);
     dispatch(getFriendsActionCreater(friends));
 

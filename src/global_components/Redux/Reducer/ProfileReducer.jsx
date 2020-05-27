@@ -2,7 +2,7 @@ import {APIProfile} from "../../api/api";
 
 let SET_USERS_PROFILE = 'SET_USERS_PROFILE';
 let SET_USERS_STATUS = 'SET_USERS_STATUS';
-
+let ADD_POST = 'ADD_POST';
 
 let initialState = {
     profile:{
@@ -14,7 +14,13 @@ let initialState = {
         },
         lookingForAJob: true
     },
-    status: ""
+    status: "",
+    post:[
+        {text: "Новые посты не проходят на серверную часть, поэтому после обновления пропадают."},
+        {text: "пост 1"},
+        {text: "пост 2"}
+
+    ]
 };
 
 const ProfileReducer = (state = initialState, action)=>{
@@ -26,6 +32,9 @@ const ProfileReducer = (state = initialState, action)=>{
 
             return {...state, status: action.status}
         }
+        case ADD_POST:{
+            return{...state,post:[{text:action.newPost},...state.post]}
+        }
         default:
             return state;
     }
@@ -34,6 +43,7 @@ const ProfileReducer = (state = initialState, action)=>{
 
 export const setUsersProfile = (profile)=>({type: SET_USERS_PROFILE, profile});
 export const setUsersStatus = (status) =>({type: SET_USERS_STATUS, status});
+export const addPostAC = (newPost)=>({ type: ADD_POST, newPost});
 
 export const profileThunkCreator = (userId)=> async (dispatch)=>{
 
@@ -49,10 +59,10 @@ export const statusThunkCreator = (userId) => async (dispatch) =>{
 };
 export const updateStatusThunkCreator = (status) => async (dispatch) =>{
 
-    const response = await APIProfile.updateStatus(status)
+    const response = await APIProfile.updateStatus(status);
     if(response.data.resultCode === 0){
         dispatch(setUsersStatus(status))
     }
-}
+};
 
 export default ProfileReducer;
